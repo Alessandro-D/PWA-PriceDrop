@@ -1,31 +1,51 @@
 import React, { Component } from 'react';
+// import ReactDom from 'react-dom';
+import Button from '@material-ui/core/Button';
+import { green } from '@material-ui/core/colors';
+import { Card, CardActionArea, CardMedia } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles({
+    button : {
+        backgroundColor : 'white',
+    },        
+    card : {
+        maxWidth: 340,
+    },
+    cardMedia : {
+        height:140,
+    }
+})
+
+const classes = useStyles;
 
 class Item extends Component {
     state = {
-        item : {
-            name: 'Item name',
-            url: 'url',
-            image_url: 'https://bulma.io/images/placeholders/1280x960.png',
-            original_price: 'original price',
-            current_price: 'current price',
-            price_query: 'default',
-            date_added: 'date'
-        }
+        count : 0,
+        item : this.props.item, 
     }
 
-    cardStyle = {
-        width: 500,
-        height: 240,
-        backgroundColor: 'lightblue',
+    classes = useStyles;
+    
+    handleIncrement = () => {
+        this.setState({count : this.state.count+1})
     }
+
 
     render() {
         return (
         <React.Fragment>
-            <div style={this.cardStyle}>
-                <h1>{ this.state.item.name }</h1>
-                <img src={this.state.item.image_url} alt="" />
-            </div>
+            <Card className={classes.card} style={{width:360}}>
+                <CardActionArea>
+                    <CardMedia
+                        className={classes.cardMedia}
+                        image={this.state.item.image_url}
+                        title="Item"
+                        style={{height:140}}
+                    />
+                </CardActionArea>
+                <Button variant="contained" color="secondary" onClick={this.handleIncrement} raised >Count: {this.state.count}</Button>
+            </Card>
         </React.Fragment>);
     }
 }

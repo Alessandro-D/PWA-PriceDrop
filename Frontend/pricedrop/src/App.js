@@ -1,12 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Item from './components/Item';
+import { Container } from '@material-ui/core';
+import ItemList from './components/Itemlist'
 
 function App() {
   return (
     <div className="App">
-      <Item></Item>
+      <Container>
+        <ItemList></ItemList>
+      </Container>
     </div>
   );
 }

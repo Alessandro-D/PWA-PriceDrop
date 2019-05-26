@@ -74,7 +74,7 @@ class Item extends Component {
                   <Grid item />
                   <Grid item>
                     <Button
-                      variant="contained"
+                      variat="contained"
                       color="primary"
                       // onClick={this.handleIncrement}
                       raised
@@ -99,4 +99,4 @@ class Item extends Component {
 
 export default Item;
 
-// TESTS
+// TESTS2

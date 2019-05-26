@@ -8,7 +8,7 @@ class ItemList extends Component {
     render() {
         return (
             <React.Fragment>
-                <Grid container spacing={2}>
+                <Grid container spacing={3}>
                     {items.map(item => (<Item key={item.id} item={item}></Item>))}
                 </Grid>
             </React.Fragment>

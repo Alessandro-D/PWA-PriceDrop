@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Item from './Item';
+import UrlSearch from './UrlSearch';
 import { Grid } from '@material-ui/core';
 import faker from 'faker';
 
@@ -9,6 +10,7 @@ class ItemList extends Component {
     render() {
         return (
             <React.Fragment>
+                <UrlSearch />
                 <Grid container spacing={3}>
                     {items.map(item => (<Item key={item.id} item={item}></Item>))}
                 </Grid>

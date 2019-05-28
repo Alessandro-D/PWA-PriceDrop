@@ -70,10 +70,10 @@ class Item extends Component {
                 </Typography>
                 <Button
                   variant="contained"
-                  color="#4CAF50"
-                  raised
+                  color="primary"
+                  raised="raised"
                 >
-                <Typography variant="h3" color="textPrimary" color="000" style={{margin:'auto', fontWeight:'bolder'}} align="left">
+                <Typography variant="h3" color="textPrimary" style={{margin:'auto', fontWeight:'bolder'}} align="left">
                   ${this.state.item.current_price}
                 </Typography>
                 </Button>

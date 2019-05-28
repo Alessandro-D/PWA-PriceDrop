@@ -15,26 +15,28 @@ class UrlSearch extends Component {
   boxStyle = {
     backgroundColor: "#FFFFFF",
     padding: 30,
-    width: "60%",
+    // width: "90%",
     margin: "30px auto"
   };
   insertStyle = {};
   render() {
     return (
-      <Paper style={this.boxStyle}>
-        <Grid container justify="space-around">
-          {/* <Typography style={this.insertStyle} color="textSecondary" variant="h4">
+    //   <Grid item xs={12} sm={10} md={8}>
+        <Paper style={this.boxStyle}>
+          <Grid container justify="space-around">
+            {/* <Typography style={this.insertStyle} color="textSecondary" variant="h4">
             Insert new item
-          </Typography> */}
-          <TextField
-            id="standard-with-placeholder"
-            label="Insert item URL here"
-            placeholder="URL"
-            style={this.searchStyle}
-            margin="normal"
-          />
-        </Grid>
-      </Paper>
+        </Typography> */}
+            <TextField
+              id="standard-with-placeholder"
+              label="Insert item URL here"
+              placeholder="URL"
+              style={this.searchStyle}
+              margin="normal"
+            />
+          </Grid>
+        </Paper>
+    //   </Grid>
     );
   }
 }

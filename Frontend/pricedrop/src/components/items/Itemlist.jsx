@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Item from './Item';
 import { Grid } from '@material-ui/core';
+import faker from 'faker';
 
 class ItemList extends Component {
     state = {}
@@ -21,9 +22,9 @@ export default ItemList;
 const items = [
     {
         id: 1,
-        name: 'Item name',
+        name: faker.commerce.productName(),
         url: 'url',
-        image_url: 'https://material-ui.com/static/images/cards/contemplative-reptile.jpg',
+        image_url: faker.image.business(300,300),
         original_price: 100,
         current_price: 90,
         price_query: 'default',
@@ -31,9 +32,9 @@ const items = [
     },
     {
         id: 2,
-        name: 'Item name',
+        name: faker.commerce.productName(),
         url: 'url',
-        image_url: 'https://material-ui.com/static/images/cards/contemplative-reptile.jpg',
+        image_url: faker.image.imageUrl(300,300),
         original_price: 100,
         current_price: 100,
         price_query: 'default',
@@ -41,18 +42,18 @@ const items = [
     },
     {
         id: 3,
-        name: 'Item name',
+        name: faker.commerce.productName(),
         url: 'url',
-        image_url: 'https://material-ui.com/static/images/cards/contemplative-reptile.jpg',
+        image_url: faker.image.technics(300,300),
         original_price: 100,
         current_price: 110,
         price_query: 'default',
         date_added: 'date'
     }, {
         id: 4,
-        name: 'Item name',
+        name: faker.commerce.productName(),
         url: 'url',
-        image_url: 'https://material-ui.com/static/images/cards/contemplative-reptile.jpg',
+        image_url: faker.image.image(300,300),
         original_price: 100,
         current_price: 100,
         price_query: 'default',

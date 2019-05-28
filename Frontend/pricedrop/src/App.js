@@ -2,8 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Container } from '@material-ui/core';
-import ItemList from './components/Itemlist'
-import MainAppBar from './components/MainAppBar'
+import ItemList from './components/items/Itemlist'
+import MainAppBar from './components/layout/MainAppBar'
 
 function App() {
   return (

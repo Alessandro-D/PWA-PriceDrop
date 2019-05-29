@@ -15,3 +15,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* .MuiToolbar-root{
+  background-color: rgb(50, 50, 50);
+} */
+
+.navBar{
+  background: rgb(50, 50, 50);
+}

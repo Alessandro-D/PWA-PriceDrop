@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Container } from '@material-ui/core';
-import ItemList from './components/items/Itemlist'
+import ItemContainer from './components/items/ItemContainer'
 import MainAppBar from './components/layout/MainAppBar'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
     <MainAppBar />
       <Container>
-        <ItemList></ItemList>
+        <ItemContainer></ItemContainer>
       </Container>
     </div>
     </React.Fragment>

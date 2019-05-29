@@ -7,26 +7,31 @@ import Typography from "@material-ui/core/Typography";
 class UrlSearch extends Component {
   state = {};
   searchStyle = {
-    marginLeft: 8,
-    marginRight: 8,
+    // marginLeft: 0, // 8,
+    // marginRight: 0, // 8
+    // marginTop: 0,
+    // marginBottom:0,
+    margin:0,
     width: "60%",
     backgroundColor: "#FFFFFF"
   };
   boxStyle = {
     backgroundColor: "#FFFFFF",
-    padding: 30,
-    // width: "90%",
-    margin: "30px auto"
+    padding: 0,
+    width: "5 0%",
+    margin: "10px 20%",
+    innerHeight:50
   };
   insertStyle = {};
   render() {
     return (
-    //   <Grid item xs={12} sm={10} md={8}>
+      //   <Grid item xs={12} sm={10} md={8}>
+      <Paper raised='true' style={{marginBottom:'20px', padding:'5px', backgroundColor:'#e5e5e5', width:'100%'}}>
         <Paper style={this.boxStyle}>
-          <Grid container justify="space-around">
+          <Grid container justify="space-around"> 
             {/* <Typography style={this.insertStyle} color="textSecondary" variant="h4">
             Insert new item
-        </Typography> */}
+          </Typography> */}
             <TextField
               id="standard-with-placeholder"
               label="Insert item URL here"
@@ -36,7 +41,8 @@ class UrlSearch extends Component {
             />
           </Grid>
         </Paper>
-    //   </Grid>
+      </Paper>
+      //   </Grid>
     );
   }
 }

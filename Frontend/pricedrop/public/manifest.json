@@ -8,18 +8,23 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/assets/img/dollar64.png",
+      "src": "dollar64.png",
       "type": "image/png",
       "sizes": "64x64"
     },
     {
-      "src": "/assets/img/dollar512.png",
+      "src": "dollar192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "dollar512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#f5f5f5"
+  "display": "fullscreen",
+  "theme_color": "#008000",
+  "background_color": "#000000"
 }

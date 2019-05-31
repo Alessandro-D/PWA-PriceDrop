@@ -80,10 +80,10 @@ function MainAppBar() {
     setState({ ...state, [side]: open });
   }
 
-  const classes = useStyles();
+  const classes = useStyles(); // #133d1b
   return (
     <div className={classes.root}>
-      <AppBar position="static" className="navBar" style={{marginBottom : 24, backgroundColor:'#133d1b'}}>
+      <AppBar position="static" className="navBar" style={{backgroundColor:'#133d1b', boxShadow:'inset 1px 2px 3px 1px black', zIndex:"1000"}}> 
         <Toolbar justify="space-between">
           {/* <Button  pull="left" color="inherit">Login</Button> */}
           <Typography style={{margin:'auto'}} variant="h6" className={classes.title} align="center">

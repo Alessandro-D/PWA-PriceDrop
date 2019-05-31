@@ -17,7 +17,7 @@ class ItemList extends Component {
         id: t,
         name: faker.commerce.productName(),
         url: "url",
-        image_url: faker.image.business(300, 300),
+        image_url: faker.random.image(300,300),
         original_price: faker.random.number({ min: 90, max: 110 }),
         current_price: faker.random.number({ min: 90, max: 110 }),
         price_query: "default",
@@ -47,105 +47,3 @@ class ItemList extends Component {
 }
 
 export default ItemList;
-
-const fakeItem = {
-  id: 1,
-  name: faker.commerce.productName(),
-  url: "url",
-  image_url: faker.image.business(300, 300),
-  original_price: faker.random.number({ min: 90, max: 110 }),
-  current_price: faker.random.number({ min: 90, max: 110 }),
-  price_query: "default",
-  date_added: "date"
-};
-//   {
-//     id: 2,
-//     name: faker.commerce.productName(),
-//     url: "url",
-//     image_url: faker.image.imageUrl(300, 300),
-//     original_price: faker.random.number({min:90,max:110}),
-//     current_price: faker.random.number({min:90,max:110}),
-//     price_query: "default",
-//     date_added: "date"
-//   },
-//   {
-//     id: 3,
-//     name: faker.commerce.productName(),
-//     url: "url",
-//     image_url: faker.image.technics(300, 300),
-//     original_price: faker.random.number({min:90,max:110}),
-//     current_price: faker.random.number({min:90,max:110}),
-//     price_query: "default",
-//     date_added: "date"
-//   },
-//   {
-//     id: 4,
-//     name: faker.commerce.productName(),
-//     url: "url",
-//     image_url: faker.image.image(300, 300),
-//     original_price: faker.random.number({min:90,max:110}),
-//     current_price: faker.random.number({min:90,max:110}),
-//     price_query: "default",
-//     date_added: "date"
-//   },
-//   {
-//     id: 5,
-//     name: faker.commerce.productName(),
-//     url: "url",
-//     image_url: faker.image.image(300, 300),
-//     original_price: faker.random.number({min:90,max:110}),
-//     current_price: faker.random.number({min:90,max:110}),
-//     price_query: "default",
-//     date_added: "date"
-//   },
-//   {
-//     id: 6,
-//     name: faker.commerce.productName(),
-//     url: "url",
-//     image_url: faker.image.image(300, 300),
-//     original_price: faker.random.number({min:90,max:110}),
-//     current_price: faker.random.number({min:90,max:110}),
-//     price_query: "default",
-//     date_added: "date"
-//   },
-//   {
-//     id: 7,
-//     name: faker.commerce.productName(),
-//     url: "url",
-//     image_url: faker.image.image(300, 300),
-//     original_price: faker.random.number({min:90,max:110}),
-//     current_price: faker.random.number({min:90,max:110}),
-//     price_query: "default",
-//     date_added: "date"
-//   },
-//   {
-//     id: 8,
-//     name: faker.commerce.productName(),
-//     url: "url",
-//     image_url: faker.image.image(300, 300),
-//     original_price: faker.random.number({min:90,max:110}),
-//     current_price: faker.random.number({min:90,max:110}),
-//     price_query: "default",
-//     date_added: "date"
-//   },
-//   {
-//     id: 9,
-//     name: faker.commerce.productName(),
-//     url: "url",
-//     image_url: faker.image.image(300, 300),
-//     original_price: faker.random.number({min:90,max:110}),
-//     current_price: faker.random.number({min:90,max:110}),
-//     price_query: "default",
-//     date_added: "date"
-//   },
-//   {
-//     id: 10,
-//     name: faker.commerce.productName(),
-//     url: "url",
-//     image_url: faker.image.image(300, 300),
-//     original_price: faker.random.number({min:90,max:110}),
-//     current_price: faker.random.number({min:90,max:110}),
-//     price_query: "default",
-//     date_added: "date"
-//   }
-// ];

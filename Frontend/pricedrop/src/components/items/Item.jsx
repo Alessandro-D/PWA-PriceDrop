@@ -14,28 +14,6 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 
-const useStyles = makeStyles({
-  button: {
-    backgroundColor: "white"
-  },
-  card: {
-    display: "flex",
-    flexDirection: "column",
-    flex: "1 0 auto"
-  },
-  cardMedia: {
-    display: "flex",
-    width: "40%",
-    height: "100%"
-  },
-  content: {
-    display: "flex",
-    backgroundColor: "#F5F5F5"
-  }
-});
-
-const classes = useStyles;
-
 class Item extends Component {
   state = {
     count: 0,
@@ -49,7 +27,7 @@ class Item extends Component {
     let diff = this.props.item.original_price - this.props.item.current_price;
     let color =
       diff == 0 ? "#e5e5e5" : diff > 0 ? "red" : diff < 0 ? "#00c925" : null;
-    console.log(color);
+    // styles.newPriceText = diff;
     return color;
   }
 
@@ -61,23 +39,16 @@ class Item extends Component {
     return (
       <React.Fragment>
         {/* CARD */}
-        <Grid item xs={12} sm={6} md={6} lg={4}>
-          <Card
-            className={classes.card}
-            style={{ display: "flex", height: 120 }}
-          >
+        <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Card style={{ display: "flex", height: 120 }}>
             {/* FOTO */}
             <CardMedia
-              className={classes.cardMedia}
               image={this.state.item.image_url}
               title="Item"
-              style={{ height: 120, width: "33.3%" }}
+              style={styles.cardMedia}
             />
             {/* CONTENT */}
-            <CardContent
-              className={classes.content}
-              style={{ display: "flex", width: "66.6%", flexDirection: "column", padding:0, margin:0 }}
-            >
+            <CardContent style={styles.cardContent}>
               <Grid container>
                 {/* NAME */}
                 <Grid item xs={12} sm={12} style={{ height: 60 }}>
@@ -89,14 +60,13 @@ class Item extends Component {
                       fontSize: "14pt",
                       margin: 1,
                       backgroundColor: "#FFFFFF"
-                      // height:'50%'
                     }}
                   >
                     {this.state.item.name}
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sm={12} style={{ height: 60 }}>
-                <Divider />
+                  <Divider />
                   <Grid
                     container
                     justify="space-between"
@@ -104,7 +74,6 @@ class Item extends Component {
                       flexGrow: 1,
                       backgroundColor: "#FFFFFF",
                       width: "100%"
-                      // height:'100%'
                     }}
                   >
                     {/* OLD PRICE */}
@@ -112,39 +81,25 @@ class Item extends Component {
                       <Typography
                         variant="h4"
                         color="textSecondary"
-                        style={{
-                          margin: "auto",
-                          fontWeight: "bold",
-                          fontSize: "32pt"
-                        }}
+                        style={styles.oldPriceText}
                         align="left"
                       >
                         ${this.state.item.original_price}
                       </Typography>
                     </Grid>
-                    <Grid item sm={6} justify="flex-end">
+                    <Grid item sm={6}>
                       {/* NEW PRICE */}
                       <Button
                         variant="contained"
-                        style={{
-                          backgroundColor: this.state.diffColor,
-                          width: "100%",
-                          height: 60,
-                          display: "block"
-                        }}
+                        style={styles.newPriceButton}
                         edge="end"
                         raised="true"
                         fullWidth={true}
                       >
                         <Typography
-                          variant="h5"
+                          variant="h4"
                           color="textPrimary"
-                          style={{
-                            margin: "auto",
-                            fontWeight: "bolder",
-                            backgroundColor: this.state.diffColor,
-                            width: "100%",
-                          }}
+                          style={styles.newPriceText}
                           align="center"
                         >
                           ${this.state.item.current_price}
@@ -163,3 +118,34 @@ class Item extends Component {
 }
 
 export default Item;
+
+const styles = {
+  cardMedia: {
+    height: 120,
+    width: "33.3%"
+  },
+  cardContent: {
+    display: "flex",
+    width: "66.6%",
+    flexDirection: "column",
+    padding: 0,
+    margin: 0
+  },
+  newPriceText: {
+    margin: "auto",
+    fontWeight: "bolder",
+    // backgroundColor: "black",
+    width: "100%"
+  },
+  newPriceButton: {
+    // backgroundColor: "white",
+    width: "100%",
+    height: 60,
+    display: "block"
+  },
+  oldPriceText: {
+    margin: "auto",
+    fontWeight: "bold",
+    fontSize: "32pt"
+  }
+};

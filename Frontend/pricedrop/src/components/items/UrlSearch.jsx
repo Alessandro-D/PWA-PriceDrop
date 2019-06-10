@@ -27,7 +27,7 @@ class UrlSearch extends Component {
   render() {
     return (
       //   <Grid item xs={12} sm={10} md={8}>
-      <Paper style={{marginBottom:'20px', padding:'5px',boxShadow:'0px 1px 3px 0px', backgroundColor:'#e5e5e5', width:'100%'}}>
+      <Paper style={{marginBottom:'20px', padding:'5px',boxShadow:'0px 1px 3px 0px', backgroundColor:'#e45374', width:'100%'}}>
         <Paper style={this.boxStyle}>
           <Grid container justify="space-around"> 
             {/* <Typography style={this.insertStyle} color="textSecondary" variant="h4">

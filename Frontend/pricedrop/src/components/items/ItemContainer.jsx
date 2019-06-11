@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Item from "./Item";
-import UrlSearch from "./UrlSearch";
 import { Grid } from "@material-ui/core";
 import faker from "faker";
+import SearchManager from "../search/SearchManager";
 
 class ItemList extends Component {
   state = {};
@@ -33,7 +33,7 @@ class ItemList extends Component {
       <React.Fragment>
         <Grid container spacing={1} justify="space-around">
           <Grid item xs={12} sm={10} md={8}>
-            <UrlSearch />
+            <SearchManager />
           </Grid>
           <Grid container spacing={3}>
             {this.items.map(item => (

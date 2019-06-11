@@ -6,6 +6,8 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import ItemContainer from "./ItemContainer";
+import { Button } from "../../../node_modules/@material-ui/core";
+import AddCircle from "@material-ui/icons/AddCircle";
 
 function TabContainer(props) {
   return (
@@ -42,6 +44,7 @@ function ScrollableTabsButtonAuto() {
           <Tab label="Group Two" />
           <Tab label="Group Three" />
           <Tab label="Group Four" />
+          <Tab onClick={() => alert()} icon={<AddCircle />} label="New Group" />
         </Tabs>
       </AppBar>
       {value === 0 && (

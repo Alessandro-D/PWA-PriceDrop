@@ -1,18 +1,16 @@
 import React, { Component } from "react";
 // import ReactDom from 'react-dom';
 import Button from "@material-ui/core/Button";
-import { green } from "@material-ui/core/colors";
 import {
   Card,
-  CardActionArea,
+  // CardActionArea,
   CardMedia,
   Grid,
-  Box,
+  // Box,
   CardContent,
   Typography,
   Divider
 } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
 
 class Item extends Component {
   state = {
@@ -26,7 +24,7 @@ class Item extends Component {
   getDiffColor() {
     let diff = this.props.item.original_price - this.props.item.current_price;
     let color =
-      diff == 0 ? "#e5e5e5" : diff > 0 ? "red" : diff < 0 ? "#00c925" : null;
+      diff === 0 ? "#e5e5e5" : diff > 0 ? "red" : diff < 0 ? "#00c925" : null;
     // styles.newPriceText = diff;
     return color;
   }

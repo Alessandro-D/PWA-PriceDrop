@@ -4,6 +4,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
 import "./_search.css";
+import { Button } from "../../../node_modules/@material-ui/core";
 
 class ReviewForm extends Component {
   state = {};
@@ -22,6 +23,7 @@ class ReviewForm extends Component {
                 margin="normal"
                 // variant="filled"
               />
+              <Button className="buttonStyle">Test</Button>
             </Grid>
           </Paper>
         </Paper>

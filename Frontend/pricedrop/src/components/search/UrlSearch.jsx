@@ -4,6 +4,8 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { Button } from "../../../node_modules/@material-ui/core";
 
+import "./_search.css"
+
 class UrlSearch extends Component {
   constructor(props) {
     super(props);
@@ -14,19 +16,15 @@ class UrlSearch extends Component {
       <React.Fragment>
           <Grid container justify="space-around">
         <Paper style={containerStyle}>
-            {/* <Paper style={boxStyle}> */}
             <Grid container>
-              {/* justify="space-around" */}
               <TextField
                 id="standard-with-placeholder"
                 label="Insert item URL here"
                 placeholder="URL"
                 style={searchStyle}
                 margin="normal"
-                // variant="filled"
               />
             </Grid>
-            {/* </Paper> */}
         </Paper>
         <Button
           style={buttonStyle}
@@ -57,15 +55,6 @@ const searchStyle = {
   backgroundColor: "#FFFFFF",
   width: "100%",
   margin: "10px"
-};
-
-const boxStyle = {
-  backgroundColor: "#FFFFFF",
-  padding: 0,
-  width: "60%",
-  margin: "10px",
-  innerHeight: 50
-  // boxShadow: "inset 1px 1px 3px 1px"
 };
 
 const buttonStyle = {

@@ -32,6 +32,8 @@
     ]
   },
   "devDependencies": {
-    "faker": "^4.1.0"
+    "chromedriver": "^75.0.0",
+    "faker": "^4.1.0",
+    "selenium-side-runner": "^3.8.0"
   }
 }

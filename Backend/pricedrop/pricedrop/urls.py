@@ -22,6 +22,6 @@ schema_view = get_schema_view(title='Pricedrop API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('items.urls')),
+    path('api/', include('items.urls')),
     path('schema/', schema_view)
 ]
